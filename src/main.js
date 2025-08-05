@@ -14,6 +14,17 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 const directionalL = new THREE.DirectionalLight(0xffffff, 5);
 scene.add(directionalL);
 
+window.addEventListener('resize', function() {
+
+			var width = window.innerWidth;
+			var height = window.innerHeight;
+			renderer.setSize( width, height );
+			camera.aspect = width / height;
+			camera.updateProjectionMatrix();
+
+
+		});
+
 let model;
     const loader = new GLTFLoader();
     loader.load('/model/nissan_silvia_s15_custom.glb',
