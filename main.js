@@ -48,7 +48,7 @@ window.addEventListener('resize', function() {
 
 const model = new THREE.Object3D( );
     const loader = new GLTFLoader();
-    loader.load('/model/Gundam.glb',
+    loader.load('/Gundam.glb',
 	 (glb ) => {
         const box = new THREE.Box3( ).setFromObject( glb.scene );
         const c = box.getCenter( new THREE.Vector3( ) );
